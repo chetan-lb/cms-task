@@ -1,10 +1,13 @@
 *{
     font-family: 'Poppins', sans-serif;;
 }
-
 .signinrow{
     height: 100vh;
 }
+
+/* .signinrow {
+    height: 100vh;
+} */
 .maininteract{
     background-color: #2196F3;
 }
@@ -52,6 +55,10 @@
     font-size: 25px;
     font-weight: 700;
     color: black;
+}
+.errorocure{
+    font-size: 11px;
+    color: red;
 }
 .mailspace{
    font-size: 14px;
@@ -109,6 +116,11 @@ input:focus{
     font-size: 18px;
     font-weight: 700;
     color: #717B84;
+    /* text-align: center; */
+    /* margin-bottom: 0 !important; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
 }
 .ellipseimage1{
     position: absolute;
@@ -148,14 +160,46 @@ input:focus{
     text-decoration: none;
 }
 
-.nodata:focus{
-    cursor: pointer;
-}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
 
+    .interactdes{
+        margin: 0px !important;
+    }
+    .interactdes-title {
+        font-size: 30px !important; 
+        margin-top: 20% !important;
+        font-weight: 700;
+        padding: 0 !important;
+    } 
+    .interactdes-text{
+        font-size: 12px;
+    }
+    .signincol {
+        margin-top: 15%;
+    }
+    .ordevide{
+        margin-bottom: 0 !important;
+    }
+}
 @media only screen and (max-width: 768px) {
     .interactdes{
-        margin: 30px !important;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center;
     }
+
+    .imgcenter{
+        text-align: center;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .logoimg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .ellipseimage1{
         position: absolute; 
         z-index: 1;
@@ -189,7 +233,7 @@ input:focus{
     }
     .signincol{
         padding: 25px !important;
-        margin-top: 18% !important;
+        margin-top: 20% !important;
     }
     .g-section{
         margin-bottom: 15px;
@@ -205,6 +249,8 @@ input:focus{
     .interactdes{
         text-align: center !important;
         /* margin: 30px !important; */
+        margin-top: 40px !important;
+        margin-bottom: 40px !important;
     }
     .account-btn{
         position: relative;
@@ -213,7 +259,7 @@ input:focus{
         width: 100%;
     }
     .termtext{
-        font-size: 12px;
+        font-size: 11px;
     }
     .forgetdata{
         font-size: 13px;
@@ -235,10 +281,17 @@ input:focus{
         font-size: 12px;
     }
     .logoimg{
-        display: flex;
+        /* display: flex;
         align-items: center;
-        justify-content: center;
-        margin: 0 !important;
-        margin: 0 !important;
+        justify-content: center; */
+        
+    }
+    .imgcenter{
+        text-align: center;
+    }
+
+    .termtext{
+        margin-bottom: 0 !important;
     }
 }
+

@@ -1,8 +1,6 @@
 import './App.css';
-import SignUp from './components/SignUp/SignUp'
-import VerifyAcc from './components/VerifyAcc/VerifyAcc';
-import Resetpass from './components/resetPass/Resetpass'
 import {Routes, Route } from "react-router-dom";
+import SignUp from './components/SignUp/SignUp'
 import Signinform from './components/Signinform/Signinform';
 
 function App() {
@@ -12,8 +10,8 @@ function App() {
       {/* <Resetpass/> */}
       {/* <VerifyAcc/> */}
       <Routes>
-          <Route exact path='/' component={SignUp}/>
-          <Route exact path='/signinform' component={Signinform}/>
+          <Route exact path='/' element={<SignUp/>}/>
+          <Route exact path='/signinform' element={<Signinform/>}/>
       </Routes>
     </>
   );

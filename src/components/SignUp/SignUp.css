@@ -4,9 +4,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.form-div{
+    width: 65%;
+}
+
 .small-font {
     font-weight: 300;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .big-font {
@@ -44,7 +48,7 @@
     margin-top: 10px;
     /* height: 47px; */
     font-weight: 700;
-    font-size: 16px;
+    font-size: 13px;
     color: #2196F3;
 }
 
@@ -174,7 +178,8 @@ input[type=password] {
 
 .g-section {
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    /* justify-content: end; */
     align-items: center;
 }
 
@@ -187,11 +192,13 @@ input:focus{
         max-width: 30%;
     }
 
+    .head-text {
+        margin-top: 80px;
+    }
+
     .left-para {
         color: white;
-        /* width: 50%; */
-        /* margin-left: 25vw; */
-        margin-top: 20px;
+        padding: 0px 10px;
     }
 
     .lowerImg {
@@ -216,7 +223,7 @@ input:focus{
 
     .small-font {
         font-weight: 300;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .big-font {
@@ -226,13 +233,13 @@ input:focus{
 
     .logo-section {
         display: flex;
-        /* align-items: center; */
+        align-items: center;
         justify-content: center;
     }
 
     .logo {
         max-width: 26%;
-        /* margin-left: 50px; */
+        /* margin-left: 0px auto; */
         margin-top: 15px;
         background-color: white;
     }
@@ -245,6 +252,10 @@ input:focus{
         font-weight: 700;
         font-size: 25px;
         margin-top: 30px;
+    }
+
+    .form-div{
+        width: 85%;
     }
 
 
@@ -315,5 +326,19 @@ input:focus{
     .sign-btn {
         position: absolute;
         z-index: 2;
+    }
+}
+
+@media screen and (min-width:900px) and (max-width:1024px) {
+    .small-font {
+        font-weight: 300;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:900px) {
+    .small-font {
+        font-weight: 300;
+        font-size: 9px;
     }
 }

@@ -13,13 +13,6 @@ export default function VerifyAcc(props) {
     const [counter, setCounter] = useState(50);
     const interval = setInterval(() => countDown(), 1000);
 
-    useEffect(() => {
-        const interval = setInterval(() => countDown(), 1000);
-
-        return () => clearInterval(interval);
-    }, []);
-
-
     function countDown() {
         if (count == 1) {
             clearInterval(interval);

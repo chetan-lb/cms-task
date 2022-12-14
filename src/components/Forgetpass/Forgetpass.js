@@ -5,12 +5,34 @@ import Ellipse6 from "../../images/forgetimage/Ellipse 17.png";
 import Ellipse7 from "../../images/forgetimage/Ellipse 18.png";
 import Group from "../../images/forgetimage/Group.png";
 import lock from "../../images/forgetimage/lock.png";
-import React from 'react';
+import React, {useState} from 'react';
+import validator from "validator";
+// import VerifyAcc from "../VerifyAcc/VerifyAcc"
 
 export default function Forgetpass(props) {
+  const [showreset, setshowreset]= useState(false)
+  const [message, setMessage] = useState(null);
+  const validateEmail = (e) => {
+    var email = e.target.value;
+    if (validator.isEmail(email)) {
+      setMessage(null);
+      setshowreset(true)
+    } else {
+      setMessage("Please, enter valid Email!");
+      setshowreset(false)
+    }
+  };
+
+  function handlepopup(){
+    // e.preventDefault()
+    props.data()
+    props.verifydata()
+    // props.closeverify()
+  }
+
   return (
-    
     <>
+     
     <div className='pop-up-forgetpass'>
       <div className='container-fluid parent-box'>
         <div className='child-box p-5 px-5 position-relative'>
@@ -37,8 +59,12 @@ export default function Forgetpass(props) {
             <h1 className='forgotpsd mt-5'>Forgot Password</h1>
             <p className='enterpara mt-4'>Enter the email address you used when you joined and we’ll <br/> send you instructions to reset your password.</p>
             <p className='enterpara mb-4'> For security reasons, we do NOT store your password. So rest <br/> assured that we will never send your password via email.</p>
-            <input type="email" id="username" name="username" className="mailspace w-100 pb-2" placeholder="Email Address" required /> <br/>
-            <a href='#'><button type="button" class="btn resetbtn w-100 mt-2 mt-4 text-white"><b>Reset password</b></button></a>
+            <input type="email" id="userEmail" onChange={(e) => validateEmail(e)} className="mailspace w-100 pb-2" placeholder="Email Address" required /> <br/>
+            <span className='emailerror'>{message}</span>
+            { showreset ? 
+                <button onClick={handlepopup} type="button" class="btn resetbtn w-100 mt-2 mt-4 text-white"><b>Reset password</b></button>:
+                <button type="button" class="btn resetbtn w-100 mt-2 mt-4 text-white" disabled><b>Reset password</b></button>
+            }
             </div>
             </div>
         </div>
